@@ -40,7 +40,8 @@ public class EmployeeController {
 	}
 	
 	@RequestMapping(value = "/deleteById/{id}", method = RequestMethod.DELETE)
-	public void deleteEmployee(@PathVariable int id) {
+	public String deleteEmployee(@PathVariable int id) {
 		empser.deleteEmployee(id);
+		return "Employee having Employee Id " + id + " is Deleted";
 	}
 }

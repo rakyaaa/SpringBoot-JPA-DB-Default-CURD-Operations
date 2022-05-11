@@ -28,9 +28,8 @@ public class EmployeeService {
 	}
 	
 
-	public String deleteEmployee(int id){
-		String ans =  empdao.deleteById(id);	
-		return ans; 
+	public void deleteEmployee(int id){
+		empdao.deleteById(id);	 
 	}
 
 	public Employee updateEmployee(Employee emp){
